@@ -21,7 +21,13 @@ app.set('view engine', 'ejs');
 // get requests / routing
 app.get('/', (req, res) => {
   // res.sendFile(path.join(__dirname, '/views/index.html'));
-  res.render('index', { title: 'Library', list: ['a', 'b'] });
+  res.render(
+    'index',
+    {
+      title: 'Library',
+      nav: ['Books', 'Authors']
+    }
+  );
 });
 
 app.listen(port, () => {
