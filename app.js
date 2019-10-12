@@ -6,7 +6,11 @@ const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const bookRouter = require('./src/routes/bookRoutes');
+const nav = [
+  { link: '/books', title: 'Books' },
+  { link: '/author', title: 'Authors' }
+];
+const bookRouter = require('./src/routes/bookRoutes')(nav);
 
 // morgan config - request logging
 app.use(morgan('tiny'));
