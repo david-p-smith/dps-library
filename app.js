@@ -6,6 +6,7 @@ const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const bookRouter = express.Router();
 
 // morgan config - request logging
 app.use(morgan('tiny'));
