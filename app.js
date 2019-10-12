@@ -5,6 +5,9 @@ var morgan = require('morgan');
 
 var app = express();
 
+//morgan config
+app.use(morgan('combined'));
+
 //get requests / routing
 app.get('/', function (req, res) {
     res.send('Hello from my library app');
