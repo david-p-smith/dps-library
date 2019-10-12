@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 // routing
 bookRouter.route('/')
   .get((req, res) => {
-    res.send('hello books');
+    res.render('books');
   });
 
 bookRouter.route('/single')
