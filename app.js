@@ -6,7 +6,7 @@ var path = require('path');
 
 var app = express();
 
-//morgan config
+//morgan config - request logging
 app.use(morgan('tiny'));
 //set up static directory - css and js
 app.use(express.static(path.join(__dirname, '/public/')));
