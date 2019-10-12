@@ -73,7 +73,8 @@ bookRouter.route('/')
       'books',
       {
         title: 'Library',
-        nav: [{ link: '/books', title: 'Books' }, { link: '/authors', title: 'Authors' }]
+        nav: [{ link: '/books', title: 'Books' }, { link: '/authors', title: 'Authors' }],
+        books
       }
     );
   });
