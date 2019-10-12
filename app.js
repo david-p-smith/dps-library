@@ -6,7 +6,7 @@ var morgan = require('morgan');
 var app = express();
 
 //morgan config
-app.use(morgan('combined'));
+app.use(morgan('tiny'));
 
 //get requests / routing
 app.get('/', function (req, res) {
