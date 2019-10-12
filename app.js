@@ -25,6 +25,7 @@ bookRouter.route('/books')
     res.send('hello books');
   });
 
+app.use('/', bookRouter);
 // get requests
 app.get('/', (req, res) => {
   // res.sendFile(path.join(__dirname, '/views/index.html'));
