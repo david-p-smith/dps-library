@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
     'index',
     {
       title: 'Library',
-      nav: ['Books', 'Authors']
+      nav: [{ link: '/books', title: 'Books' }, { link: '/authors', title: 'Authors' }]
     }
   );
 });
