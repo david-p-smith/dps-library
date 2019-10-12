@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "@powershell -command $env:DEBUG='*';nodemon app.js",
-    "start": "@powershell -command $env:DEBUG='app';nodemon app.js"
+    "start": "@powershell -command $env:DEBUG='app';nodemon app.js",
+    "lint": "eslint app.js"
   },
   "author": "",
   "license": "ISC",
