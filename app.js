@@ -8,6 +8,8 @@ var app = express();
 
 //morgan config
 app.use(morgan('tiny'));
+//set up static directory - css and js
+app.use(express.static(path.join(__dirname, '/public/')));
 
 //get requests / routing
 app.get('/', function (req, res) {
