@@ -1,5 +1,6 @@
 var express = require('express');
 var chalk = require('chalk');
+var debug = require('debug')('app');
 
 var app = express();
 
