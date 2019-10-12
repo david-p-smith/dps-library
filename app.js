@@ -20,12 +20,12 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 // routing
-bookRouter.route('/books')
+bookRouter.route('/')
   .get((req, res) => {
     res.send('hello books');
   });
 
-app.use('/', bookRouter);
+app.use('/books', bookRouter);
 // get requests
 app.get('/', (req, res) => {
   // res.sendFile(path.join(__dirname, '/views/index.html'));
