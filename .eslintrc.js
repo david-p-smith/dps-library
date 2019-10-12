@@ -8,9 +8,6 @@ module.exports = {
   extends: [
     'airbnb-base',
   ],
-  rules: {
-    "comma-dangle": 0
-  },
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -19,5 +16,6 @@ module.exports = {
     ecmaVersion: 2018,
   },
   rules: {
+    "comma-dangle": 0
   },
 };
