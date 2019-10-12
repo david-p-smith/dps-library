@@ -19,7 +19,13 @@ app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist'))
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
-// get requests / routing
+// routing
+bookRouter.route('/books')
+  .get((req, res) => {
+    res.send('hello books');
+  });
+
+// get requests
 app.get('/', (req, res) => {
   // res.sendFile(path.join(__dirname, '/views/index.html'));
   res.render(
