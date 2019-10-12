@@ -21,7 +21,7 @@ app.set('view engine', 'pug');
 // get requests / routing
 app.get('/', (req, res) => {
   // res.sendFile(path.join(__dirname, '/views/index.html'));
-  res.render('index');
+  res.render('index', { title: 'MyLibrary' });
 });
 
 app.listen(port, () => {
