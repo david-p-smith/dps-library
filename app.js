@@ -1,1 +1,1 @@
-console.log('Hello world, this is Node!');
+var express = require('express');
