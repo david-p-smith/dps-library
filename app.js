@@ -14,6 +14,13 @@ const bookRouter = require('./src/routes/bookRoutes')(nav);
 
 // morgan config - request logging
 app.use(morgan('tiny'));
+
+// middleware example
+app.use((req, res, next) => {
+  debug('my middleware');
+  next();
+});
+
 // set up static directory - css and js
 app.use(express.static(path.join(__dirname, '/public/')));
 app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
