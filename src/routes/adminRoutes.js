@@ -7,6 +7,8 @@ function router(nav) {
     .get((req, res) => {
       res.send('inserting books');
     });
+
+  return adminRouter;
 }
 
 module.exports = router;
