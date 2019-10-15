@@ -11,6 +11,7 @@ const nav = [
   { link: '/authors', title: 'Author' }
 ];
 const bookRouter = require('./src/routes/bookRoutes')(nav);
+const adminRouter = require('./src/routes/adminRoutes')(nav);
 
 // morgan config - request logging
 app.use(morgan('tiny'));
@@ -31,6 +32,7 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.use('/books', bookRouter);
+app.use('/admin', adminRouter);
 // get requests
 app.get('/', (req, res) => {
   // res.sendFile(path.join(__dirname, '/views/index.html'));
