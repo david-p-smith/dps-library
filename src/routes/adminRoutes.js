@@ -54,16 +54,15 @@ const books = [
 function router(nav) {
   adminRouter.route('/')
     .get((req, res) => {
+
       const url = 'mongodb://localhost:27017';
       const dbName = 'libraryApp';
 
       (async function mongo() {
-
         let client;
 
         try {
-
-          client = MongoClient.connect(url);
+          client = await MongoClient.connect(url);
           debug('Connected correctly to Mongo server');
 
           const db = client.db(dbName);
