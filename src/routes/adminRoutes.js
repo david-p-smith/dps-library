@@ -1,5 +1,5 @@
 const express = require('express');
-const mongoClient = require('mongodb');
+const { MongoClient } = require('mongodb');
 
 const adminRouter = express.Router();
 
