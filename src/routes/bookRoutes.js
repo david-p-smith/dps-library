@@ -50,6 +50,9 @@ function router(nav) {
     })
     .get((req, res) => {
       const { id } = req.params;
+      const url = 'mongodb://localhost:27017';
+      const dbName = 'libraryApp';
+
       res.render(
         'bookView',
         {
