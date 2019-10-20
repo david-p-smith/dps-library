@@ -26,6 +26,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({ secret: 'library' }));
 
+// passport config (custom)
+require('./src/config/passport.js')(app);
+
 // middleware example
 app.use((req, res, next) => {
   debug('my middleware');
