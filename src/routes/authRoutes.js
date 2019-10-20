@@ -12,4 +12,4 @@ function router() {
   return authRouter;
 };
 
-module.exports router;
+module.exports = router;
