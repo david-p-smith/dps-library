@@ -15,6 +15,10 @@ function router() {
         res.redirect('/auth/profile');
       });
     });
+  authRouter.route('profile')
+    .get((req, res) => {
+
+    });
   return authRouter;
 }
 
