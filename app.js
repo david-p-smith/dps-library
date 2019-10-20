@@ -13,7 +13,7 @@ const nav = [
 ];
 const bookRouter = require('./src/routes/bookRoutes')(nav);
 const adminRouter = require('./src/routes/adminRoutes')(nav);
-const authRouter = require('./src/routes/adminRoutes')(nav);
+const authRouter = require('./src/routes/authRoutes')(nav);
 
 // morgan config - request logging
 app.use(morgan('tiny'));
