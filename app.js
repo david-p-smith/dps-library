@@ -3,6 +3,7 @@ const chalk = require('chalk');
 const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -15,6 +16,9 @@ const adminRouter = require('./src/routes/adminRoutes')(nav);
 
 // morgan config - request logging
 app.use(morgan('tiny'));
+// body parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // middleware example
 app.use((req, res, next) => {
