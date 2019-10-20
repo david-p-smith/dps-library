@@ -11,8 +11,9 @@ function router() {
       // create user
 
       // log user in
-      req.login(req.body);
-      res.json(req.body);
+      req.login(req.body, () => {
+        res.redirect('/auth/profile');
+      });
     });
   return authRouter;
 }
