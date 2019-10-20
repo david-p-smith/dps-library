@@ -21,8 +21,12 @@ function router() {
           const db = client.db(dbName);
 
           const col = db.collection('users');
+          const user = { username, password };
+
+          const results = await col.insertOne(user);
+          debug(results);
         } catch (err) {
-          debug(err.body);
+          debug(err);
         }
       }());
 
