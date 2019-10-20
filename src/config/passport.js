@@ -2,6 +2,7 @@
 // only additional deps. are required
 
 const passport = require('passport');
+require('./strategies/local.strategy');
 
 module.exports = function passportConfig(app) {
 
@@ -21,5 +22,4 @@ module.exports = function passportConfig(app) {
     // skeleton - done(err, thing)
     done(null, user); //could use just user.id for efficiency
   });
-
 };
