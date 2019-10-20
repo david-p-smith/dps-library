@@ -6,7 +6,7 @@ require('./strategies/local.strategy');
 
 module.exports = function passportConfig(app) {
 
-  app.use(passport.initialize());
+  app.use(passport.initialize()); // creates e.g. login on request - i.e. req.login
   app.use(passport.session());
 
   // Stores user in session
