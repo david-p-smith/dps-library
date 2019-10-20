@@ -23,6 +23,8 @@ app.use(morgan('tiny'));
 // body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(session({ secret: 'library' }));
 
 // middleware example
 app.use((req, res, next) => {
