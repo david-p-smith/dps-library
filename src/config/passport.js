@@ -16,8 +16,10 @@ module.exports = function passportConfig(app) {
   });
 
   // Retrieves user from session
-  passport.deserializeUser(
+  passport.deserializeUser((user, done) => {
 
-  );
+    // skeleton - done(err, thing)
+    done(null, user); //could use just user.id for efficiency
+  });
 
 };
