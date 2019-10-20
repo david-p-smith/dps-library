@@ -11,6 +11,21 @@ function router() {
       const url = 'mongodb://localhost:27017';
       const dbName = 'libraryApp';
 
+      //new async function ((){}())
+      (async function addUser() {
+        let client;
+        try {
+          client = await MongoClient.connect(url);
+          debug('Connected to db server');
+
+          const db = client.db(dbName);
+
+          const col = db.collection('users');
+        } catch (err) {
+          debug(err.body);
+        }
+      }());
+
       debug(req.body);
       // create user
 
