@@ -22,21 +22,22 @@ function router() {
 
           const col = db.collection('users');
           const user = { username, password };
-
+          // create user
           const results = await col.insertOne(user);
           debug(results);
+          // log user in
+          req.login(results.ops[0], () => { //results.ops[0] -> new record inserted into db
+            res.redirect('/auth/profile');
+          });
         } catch (err) {
           debug(err);
         }
       }());
 
       debug(req.body);
-      // create user
 
-      // log user in
-      req.login(req.body, () => {
-        res.redirect('/auth/profile');
-      });
+
+
     });
   authRouter.route('/profile')
     .get((req, res) => {
