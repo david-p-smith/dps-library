@@ -5,7 +5,6 @@ const debug = require('debug')('app:bookRoutes');
 const bookRouter = express.Router();
 
 function router(nav) {
-
   // routing
   bookRouter.route('/')
     .get((req, res) => {

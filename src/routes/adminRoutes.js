@@ -54,7 +54,6 @@ const books = [
 function router(nav) {
   adminRouter.route('/')
     .get((req, res) => {
-
       const url = 'mongodb://localhost:27017';
       const dbName = 'libraryApp';
 
@@ -69,7 +68,6 @@ function router(nav) {
 
           const response = await db.collection('books').insertMany(books);
           res.json(response);
-
         } catch (err) {
           debug(err.stack);
         }
