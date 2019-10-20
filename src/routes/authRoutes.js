@@ -10,6 +10,6 @@ function router() {
       debug(req.body);
     });
   return authRouter;
-};
+}
 
 module.exports = router;
