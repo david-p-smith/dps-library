@@ -17,7 +17,7 @@ function router() {
     });
   authRouter.route('profile')
     .get((req, res) => {
-
+      res.json(req.user);
     });
   return authRouter;
 }
