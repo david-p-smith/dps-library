@@ -8,6 +8,9 @@ function router() {
   authRouter.route('/signUp')
     .post((req, res) => {
       debug(req.body);
+      // create user
+
+      // log user in
       res.json(req.body);
     });
   return authRouter;
