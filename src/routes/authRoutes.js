@@ -7,6 +7,10 @@ const authRouter = express.Router();
 function router() {
   authRouter.route('/signUp')
     .post((req, res) => {
+      const { username, password } = req.body;
+      const url = 'mongodb://localhost:27017';
+      const dbName = 'libraryApp';
+
       debug(req.body);
       // create user
 
