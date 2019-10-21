@@ -2,7 +2,7 @@
 // only additional deps. are required
 
 const passport = require('passport');
-require('./strategies/local.strategy');
+require('./strategies/local.strategy')();
 
 module.exports = function passportConfig(app) {
 
