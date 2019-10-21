@@ -36,6 +36,7 @@ function router() {
 
       debug(req.body);
     });
+  authRouter.route('/signin');
   authRouter.route('/profile')
     .get((req, res) => {
       res.json(req.user);
