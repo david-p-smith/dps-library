@@ -35,9 +35,6 @@ function router() {
       }());
 
       debug(req.body);
-
-
-
     });
   authRouter.route('/profile')
     .get((req, res) => {
