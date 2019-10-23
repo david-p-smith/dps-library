@@ -108,7 +108,8 @@
                                         </div>
                                         <div class="col-xs-3"></div>
                                     </div>
-                                    <br><%=book.details.description%><br>
+                                    <br><%-book.details.description%><br>
+                                    <!-- '-' to display unescaped - HTML would render, not print -->
                                 </div>
                             </div>
                             <hr>
