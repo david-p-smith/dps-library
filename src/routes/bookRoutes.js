@@ -6,6 +6,7 @@ const bookController = require('../controllers/bookController');
 const bookRouter = express.Router();
 
 function router(nav) {
+  const { getIndex } = bookController(nav);
   bookRouter.use((req, res, next) => {
     if (req.user) {
       next();
@@ -16,36 +17,7 @@ function router(nav) {
   // routing
   bookRouter.route('/')
     .get((req, res) => {
-      const url = 'mongodb://localhost:27017';
-      const dbName = 'libraryApp';
-
-      (async function mongo() {
-        let client;
-
-        try {
-          client = await MongoClient.connect(url);
-          debug('Connected correctly to Mongo server');
-
-          const db = client.db(dbName);
-
-          const col = await db.collection('books');
-
-          const books = await col.find().toArray();
-
-          res.render(
-            'bookListView',
-            {
-              title: 'Library',
-              nav,
-              books
-            }
-          );
-        } catch (err) {
-          debug(err.stack);
-        }
-
-        client.close();
-      }());
+      getIndex(req, res);
     });
 
   bookRouter.route('/:id')
