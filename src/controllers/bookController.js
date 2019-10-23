@@ -55,7 +55,7 @@ function bookController(bookService, nav) {
 
         debug(book);
 
-
+        book.details = await bookService.getBookById(book.bookId);
 
         res.render(
           'bookView',
