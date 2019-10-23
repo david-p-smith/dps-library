@@ -14,4 +14,4 @@ function goodreadsService() {
   };
 }
 
-module.exports = goodreadsService;
+module.exports = goodreadsService();
